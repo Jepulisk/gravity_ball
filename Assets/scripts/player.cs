@@ -28,11 +28,6 @@ public class player : MonoBehaviour {
         rigidbody.position = new Vector3 (Mathf.Clamp(rigidbody.position.x, -x + radius, x - radius), Mathf.Clamp(rigidbody.position.y, -y + radius, y - radius), 0.0f);
     }
 
-    void LateUpdate() {
-        speed += 1.0f;
-        print(speed);
-    }
-
     void OnTriggerEnter2D(Collider2D other) {
          Destroy(other.gameObject);
     }

@@ -5,13 +5,14 @@ using UnityEngine;
 public class player : MonoBehaviour {
 
     private Rigidbody2D rigidbody;
-    private float rigidbody_dial;
+    private float radius;
     public float speed;
     private Vector3 gravity;
     public Camera main_camera;
 
     void Awake() {
         rigidbody = this.GetComponent<Rigidbody2D>();
+        radius = this.GetComponent<Renderer>().bounds.size.x/2;
     }
 
     void Update() {
@@ -20,28 +21,10 @@ public class player : MonoBehaviour {
 
     void FixedUpdate() {
         rigidbody.velocity = gravity * speed * Time.deltaTime;
-    }
 
-    void LateUpdate() {
         float y = main_camera.orthographicSize;    
         float x = y * Screen.width / Screen.height;
 
-        //rigidbody.position = new Vector3 (Mathf.Clamp(rigidbody.position.x, -x, x), Mathf.Clamp(rigidbody.position.y, -y, y), 0.0f);
-
-        if (rigidbody.position.y < -y + 0.5f) {
-            rigidbody.position = new Vector3 (rigidbody.position.x, -y + 0.5f, 0.0f);
-        }
-
-        if (rigidbody.position.y > y - 0.5f) {
-            rigidbody.position = new Vector3 (rigidbody.position.x, y - 0.5f, 0.0f);
-        }
-
-        if (rigidbody.position.x < -x + 0.5f) {
-            rigidbody.position = new Vector3 (-x + 0.5f, rigidbody.position.y, 0.0f);
-        }
-
-        if (rigidbody.position.x > x - 0.5f) {
-            rigidbody.position = new Vector3 (x - 0.5f, rigidbody.position.y, 0.0f);
-        }
+        rigidbody.position = new Vector3 (Mathf.Clamp(rigidbody.position.x, -x + radius, x - radius), Mathf.Clamp(rigidbody.position.y, -y + radius, y - radius), 0.0f);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5004064665386448340}
   - component: {fileID: 5004064665386448341}
   - component: {fileID: 5004064665386448338}
+  - component: {fileID: 3724417358462033582}
   - component: {fileID: 6939400712551259695}
   - component: {fileID: 5004064665386448343}
   m_Layer: 0
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 614db245de0b30748bcd561c8669675c, type: 2}
+  - {fileID: 2100000, guid: 2ac7dfaae7dbc5c4ca4e7f9d4d4e7a27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,6 +83,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!58 &3724417358462033582
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5004064665386448336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!50 &6939400712551259695
 Rigidbody2D:
   serializedVersion: 4

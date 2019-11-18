@@ -2,4 +2,5 @@
 /*/
 
 !.gitignore
-!/Assets/
+!/[Aa]ssets/**/*.meta
+!/[Pp]roject[Ss]ettings/

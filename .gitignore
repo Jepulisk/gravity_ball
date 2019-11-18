@@ -2,5 +2,5 @@
 /*/
 
 !.gitignore
-!/[Aa]ssets/**/*.meta
+!/[Aa]ssets/
 !/[Pp]roject[Ss]ettings/

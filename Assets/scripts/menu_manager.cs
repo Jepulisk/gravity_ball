@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class main_menu : MonoBehaviour {
+public class menu_manager : MonoBehaviour {
 
     void Start() {
         Button play = transform.Find("play").GetComponent<Button>();

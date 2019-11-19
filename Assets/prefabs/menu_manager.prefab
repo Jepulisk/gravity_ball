@@ -620,6 +620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad28da6a74aad2449fb4af6a33ef121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_menu: {fileID: 4658345351434242136}
+  play: {fileID: 4658345353421568480}
+  options: {fileID: 6010917923158176716}
+  options_menu: {fileID: 7799232151900478925}
+  pause_menu: {fileID: 5030331293126466673}
 --- !u!1 &4658345352935558291
 GameObject:
   m_ObjectHideFlags: 0

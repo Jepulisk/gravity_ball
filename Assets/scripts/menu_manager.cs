@@ -8,30 +8,29 @@ public class menu_manager : MonoBehaviour {
 
     private static menu_manager instance;
 
-    private Canvas main_menu;
-    private Canvas options_menu;
-    private Canvas pause_menu;
+    public Canvas main_menu;
+
+    public Button play;
+    public Button options;
+
+    public Canvas options_menu;
+
+    public Canvas pause_menu;
 
     void Awake() {
         if (instance == null) {
             instance = this;
         } else if (instance != this) {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
 
         DontDestroyOnLoad(this);
 
-        main_menu = this.transform.Find("main_menu").GetComponent<Canvas>();
-        options_menu = this.transform.Find("options_menu").GetComponent<Canvas>();
-        pause_menu = this.transform.Find("pause_menu").GetComponent<Canvas>();
-
         options_menu.enabled = false;
         pause_menu.enabled = false;
 
-        Button play = main_menu.transform.Find("play").GetComponent<Button>();
         play.onClick.AddListener(Play);
 
-        Button options = main_menu.transform.Find("options").GetComponent<Button>();
         options.onClick.AddListener(Options);
     }
 

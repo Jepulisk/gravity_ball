@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class camera_manager : MonoBehaviour {
 
-    public static camera_manager instance;
+    private static camera_manager instance;
 
     void Awake() {
         if (instance == null) {
             instance = this;
         } else if (instance != this) {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
 
         DontDestroyOnLoad(this);
     }
 
-    
+
 }

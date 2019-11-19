@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class player_manager : MonoBehaviour {
 
-    public static player_manager instance;
+    private static player_manager instance;
+
+    public GameObject player;
 
     void Awake() {
         if (instance == null) {
             instance = this;
         } else if (instance != this) {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
 
         DontDestroyOnLoad(this);
+
+        player.SetActive(false);
     }
 }

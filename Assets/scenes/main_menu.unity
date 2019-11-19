@@ -308,6 +308,11 @@ PrefabInstance:
       propertyPath: main_camera
       value: 
       objectReference: {fileID: 2944823557144602658}
+    - target: {fileID: 2681932771546314173, guid: 06fa0b2d8b3115145b6a01e29c97c87f,
+        type: 3}
+      propertyPath: speed
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2681932771546314174, guid: 06fa0b2d8b3115145b6a01e29c97c87f,
         type: 3}
       propertyPath: m_LocalPosition.x

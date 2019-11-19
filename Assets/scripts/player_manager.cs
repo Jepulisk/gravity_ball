@@ -12,11 +12,19 @@ public class player_manager : MonoBehaviour {
         if (instance == null) {
             instance = this;
         } else if (instance != this) {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
 
         DontDestroyOnLoad(this);
 
+        player.SetActive(false);
+    }
+
+    public void EnablePlayer() {
+        player.SetActive(true);
+    }
+
+    public void DisablePlayer() {
         player.SetActive(false);
     }
 }

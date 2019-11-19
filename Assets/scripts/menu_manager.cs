@@ -10,7 +10,7 @@ public class menu_manager : MonoBehaviour {
 
     private Canvas main_menu;
     private Canvas options_menu;
-    private Canvas game_menu;
+    private Canvas pause_menu;
 
     void Awake() {
         if (instance == null) {
@@ -23,10 +23,10 @@ public class menu_manager : MonoBehaviour {
 
         main_menu = this.transform.Find("main_menu").GetComponent<Canvas>();
         options_menu = this.transform.Find("options_menu").GetComponent<Canvas>();
-        game_menu = this.transform.Find("game_menu").GetComponent<Canvas>();
+        pause_menu = this.transform.Find("pause_menu").GetComponent<Canvas>();
 
         options_menu.enabled = false;
-        game_menu.enabled = false;
+        pause_menu.enabled = false;
 
         Button play = main_menu.transform.Find("play").GetComponent<Button>();
         play.onClick.AddListener(Play);
